@@ -6,6 +6,7 @@ import * as bodyParser from 'body-parser';
 import logger from './shared/utils/logger';
 
 
+
 const httpPort = process.env.PORT || '4000';
 
 const AWSXRay = require('aws-xray-sdk');
