@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PaymentsByStudentController } from './src/controllers/PaymentsByStudent/PaymentsByStudent.controller';
-import { PaymentsByStudentService } from './src/controllers/PaymentsByStudent/PaymentsByStudent.service';
-import { PaymentsByStudentRepository } from './src/controllers/PaymentsByStudent/PaymentsByStudent.repository';
+import { PaymentsByStudentController } from './modules/controllers/PaymentsByStudent/PaymentsByStudent.controller';
+import { PaymentsByStudentService } from './modules/controllers/PaymentsByStudent/PaymentsByStudent.service';
+import { PaymentsByStudentRepository } from './modules/controllers/PaymentsByStudent/PaymentsByStudent.repository';
 @Module({
   imports: [],
   controllers: [AppController, PaymentsByStudentController],

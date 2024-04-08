@@ -1,6 +1,6 @@
 import { Global, Module } from "@nestjs/common";
 import { QaasAPI } from "./qaas.service";
-import { PaymentCons } from "src/src/controllers/PaymentsByStudent/cons/PaymentConst";
+import { PaymentCons } from "src/modules/controllers/PaymentsByStudent/cons/PaymentConst";
 
 @Global()
 @Module({
