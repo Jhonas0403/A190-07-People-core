@@ -1,7 +1,7 @@
 // import { Injectable } from "@nestjs/common";
 import *as request from "superagent";
 import { Injectable } from '@nestjs/common';
-import { Configuration } from "src/configuration/configuration";
+import { Configuration } from "src/infraestructure/configuration/configuration";
 @Injectable()
 export class QaasApiService {
     request: any;
