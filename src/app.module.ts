@@ -6,7 +6,7 @@ import { PaymentsByStudentService } from './src/controllers/PaymentsByStudent/Pa
 import { PaymentsByStudentRepository } from './src/controllers/PaymentsByStudent/PaymentsByStudent.repository';
 @Module({
   imports: [],
-  controllers: [AppController, PaymentsByStudentController],
-  providers: [AppService, PaymentsByStudentService, PaymentsByStudentRepository],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
