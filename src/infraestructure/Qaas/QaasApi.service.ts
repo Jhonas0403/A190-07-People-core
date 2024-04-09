@@ -1,7 +1,8 @@
 // import { Injectable } from "@nestjs/common";
 import *as request from "superagent";
 import { Injectable } from '@nestjs/common';
-import { Configuration } from "src/infraestructure/configuration/configuration";
+import { ConfigurationInterface } from "../interfaces/Configuration";
+import { Configuration } from "../configuration/configuration";
 import logger from "src/shared/utils/logger";
 import { Tracer } from "zipkin";
 const zipkinPlugin = require('zipkin-instrumentation-superagent');
@@ -31,7 +32,6 @@ export class QaasApiService {
     })
   }
   queryPeopleSoftDatabase(query: string) {
-    this.init();//por corregir
     const database = 'peoplesoft';
     return async () => {
       const startime = Date.now();
