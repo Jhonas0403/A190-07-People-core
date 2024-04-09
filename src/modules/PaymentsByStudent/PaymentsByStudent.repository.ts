@@ -1,13 +1,17 @@
 import { Injectable } from "@nestjs/common";
-import { PaymentCons } from "./cons/PaymentConst";
+import { PaymentConst } from "../../utils/PaymentConst.service";
 import { HttpGateway } from "src/infraestructure/interfaces/HttpGateway";
+import { QaasApiService } from "src/infraestructure/Qaas/QaasApi.service";
 
 @Injectable()
 export class PaymentsByStudentRepository {
-    paymentCons:PaymentCons;
-    httpGateway:HttpGateway;
+    paymentCons:PaymentConst;
+    httpGateway: QaasApiService;
 
-    constructor(payC:PaymentCons, http:HttpGateway){
+    constructor(
+        payC:PaymentConst,
+        http: QaasApiService
+    ) {
         this.paymentCons = payC;
         this.httpGateway = http;
     }
@@ -16,13 +20,15 @@ export class PaymentsByStudentRepository {
         period: string
     ) {
         const query = buildQuery(studentId, period, 'UNUTP', 'PREG');
-        const fnToExecute = this.httpGateway.getQaasAPI().queryPeopleSoftDatabase(query);
+        const fnToExecute = this.httpGateway.queryPeopleSoftDatabase(query);
         const result = await fnToExecute();
-        const data = result.body.data.result === null ? null   : result.body.data.result.rows;
+        const data = result.body.data.result === null ? null : result.body.data.result.rows;
         if (data[0] != null) {
             const payments = this.paymentCons.processPayments(data);
-      
+
             return payments;
+          }else{
+            return "es data"
           }
     }
 

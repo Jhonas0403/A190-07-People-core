@@ -1,4 +1,8 @@
-export class PaymentCons {
+import { Injectable } from "@nestjs/common";
+
+@Injectable()
+
+export class PaymentConst {
     BUSINESS_UNIT: string;
     STUDENT_ID: string;
     DUE_DATE: string;
