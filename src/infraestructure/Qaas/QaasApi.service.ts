@@ -1,7 +1,5 @@
-// import { Injectable } from "@nestjs/common";
 import *as request from "superagent";
 import { Injectable } from '@nestjs/common';
-import { ConfigurationInterface } from "../interfaces/Configuration";
 import { Configuration } from "../configuration/configuration";
 import logger from "src/shared/utils/logger";
 import { Tracer } from "zipkin";
@@ -23,7 +21,6 @@ export class QaasApiService {
   private tracer: any
   init() {
     this.request.set('Accept', 'application/json');
-
     this.tracer = new Tracer({
       ctxImpl: new CLSContext(),
       recorder: recorder,
@@ -33,10 +30,10 @@ export class QaasApiService {
   }
   queryPeopleSoftDatabase(query: string) {
     const database = 'peoplesoft';
+
     return async () => {
       const startime = Date.now();
-      try {
-        
+      try { 
         logger.info({
           idTransaccion: this.tracer.id.traceId,
           action: 'Request to qaas-service',

@@ -1,6 +1,5 @@
 import { Injectable } from "@nestjs/common";
 import { PaymentConst } from "../../utils/PaymentConst.service";
-import { HttpGateway } from "src/infraestructure/interfaces/HttpGateway";
 import { QaasApiService } from "src/infraestructure/Qaas/QaasApi.service";
 
 @Injectable()
