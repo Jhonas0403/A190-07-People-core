@@ -38,7 +38,9 @@
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
     "superagent": "^8.1.2",
-    "typeorm": "^0.3.20"
+    "typeorm": "^0.3.20",
+    "zipkin": "^0.22.0",
+    "zipkin-instrumentation-superagent": "^0.22.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
