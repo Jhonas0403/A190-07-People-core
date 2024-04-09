@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { PaymentsByStudentModule } from './modules/PaymentsByStudent/PaymentsByStudent.module';
 import { QaasApiModule } from './infraestructure/Qaas/QaasApi.module';
 import { PaymentConstModule } from './utils/PaymentConst.module';
+import { PaymentsCulqiByStudentModule } from './modules/payments-culqi-by-student/payments-culqi-by-student.module';
 @Global()
 @Module({
   imports: [ConfigModule.forRoot({
@@ -13,7 +14,8 @@ import { PaymentConstModule } from './utils/PaymentConst.module';
   }),
     PaymentsByStudentModule,
     QaasApiModule,
-    PaymentConstModule
+    PaymentConstModule,
+    PaymentsCulqiByStudentModule
   ],
   controllers: [AppController],
   providers: [AppService],
