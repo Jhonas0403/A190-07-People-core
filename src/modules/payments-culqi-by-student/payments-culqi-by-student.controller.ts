@@ -1,6 +1,6 @@
 import { Controller, Injectable, Get, Query, HttpStatus } from '@nestjs/common';
 import { PaymentsCulqiByStudentService } from './payments-culqi-by-student.service';
-import { HttpResponse } from 'src/infraestructure/entities/HttpResponse';
+import { HttpResponse } from '../../infraestructure/entities/HttpResponse';
 import { PaymentsCulqiByStudentReportRequest } from './interfaces/request';
 
 @Injectable()

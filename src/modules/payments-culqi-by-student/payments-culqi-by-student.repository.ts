@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
-import { QaasApiService } from "src/infraestructure/Qaas/QaasApi.service";
-import { PaymentConst } from "src/utils/PaymentConst.service";
+import { QaasApiService } from "../../infraestructure/Qaas/QaasApi.service";
+import { PaymentConst } from "../../utils/PaymentConst.service";
 
 @Injectable()
 export class PaymentsCulqiByStudentRepository {
@@ -26,7 +26,7 @@ export class PaymentsCulqiByStudentRepository {
             return payments;
         }
         else{
-            return "es data"
+            return false;
         }
     }
 }

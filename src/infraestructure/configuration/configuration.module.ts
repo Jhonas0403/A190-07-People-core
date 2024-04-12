@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { Configuration } from "src/infraestructure/configuration/configuration";
+import { Configuration } from "./configuration";
 @Module({
     providers:[Configuration],
     exports:[Configuration],
