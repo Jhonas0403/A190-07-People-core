@@ -1,7 +1,7 @@
 import { Controller, Injectable, Get, Query, HttpStatus } from '@nestjs/common';
 import { PaymentsCulqiByStudentService } from './payments-culqi-by-student.service';
 import { HttpResponse } from '../../infraestructure/entities/HttpResponse';
-import { PaymentsCulqiByStudentReportRequest } from './interfaces/request';
+import { PaymentsCulqiByStudentRequest } from './interfaces/request';
 
 @Injectable()
 @Controller()
@@ -12,7 +12,7 @@ export class PaymentsCulqiByStudentController {
     async PaymentsCulqiByStudent(
         @Query('studentId') studentId: string
     ){
-        const request: PaymentsCulqiByStudentReportRequest = {
+        const request: PaymentsCulqiByStudentRequest = {
             studentId
         }
         const data = await this.paymentCulqiByStudent.request(request);

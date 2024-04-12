@@ -1,3 +1,3 @@
-export interface PaymentsCulqiByStudentReportRequest {
+export interface PaymentsCulqiByStudentRequest {
     studentId: string;
 }
