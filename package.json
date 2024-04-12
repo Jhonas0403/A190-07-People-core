@@ -1,5 +1,5 @@
 {
-  "name": "a190-08-ms-people-core",
+  "name": "a190-07-ms-payments-core",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -38,7 +38,9 @@
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
     "superagent": "^8.1.2",
-    "typeorm": "^0.3.20"
+    "typeorm": "^0.3.20",
+    "zipkin": "^0.22.0",
+    "zipkin-instrumentation-superagent": "^0.22.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
