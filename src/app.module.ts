@@ -2,11 +2,14 @@ import { Global, Module, OnModuleInit } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
-import { PaymentsByStudentModule } from './modules/PaymentsByStudent/PaymentsByStudent.module';
 import { QaasApiModule } from './infraestructure/Qaas/QaasApi.module';
 import { PaymentConstModule } from './utils/PaymentConst.module';
 import { PaymentsCulqiByStudentModule } from './modules/payments-culqi-by-student/payments-culqi-by-student.module';
 import { QaasApiService } from './infraestructure/Qaas/QaasApi.service';
+import { PaymentsByStudentController } from './modules/payments-by-student/payments-by-student.controller';
+import { PaymentsByStudentModule } from './modules/payments-by-student/payments-by-student.module';
+import { PaymentsDiscountFullInstallmentsModule } from './modules/payments-discount-full-installments/payments-discount-full-installments.module';
+import { PaymentDetailModule } from './modules/payment-detail/payment-detail.module';
 @Global()
 @Module({
   imports: [ConfigModule.forRoot({
@@ -16,7 +19,9 @@ import { QaasApiService } from './infraestructure/Qaas/QaasApi.service';
     PaymentsByStudentModule,
     QaasApiModule,
     PaymentConstModule,
-    PaymentsCulqiByStudentModule
+    PaymentsCulqiByStudentModule,
+    PaymentsDiscountFullInstallmentsModule,
+    PaymentDetailModule
   ],
   controllers: [AppController],
   providers: [AppService],

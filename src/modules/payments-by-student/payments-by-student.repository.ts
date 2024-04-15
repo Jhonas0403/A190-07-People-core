@@ -27,7 +27,7 @@ export class PaymentsByStudentRepository {
 
             return payments;
           }else{
-            return "es data"
+            return []
           }
     }
 
