@@ -19,7 +19,7 @@ export class PaymentDetailController {
         const data = await this.paymentDetailService.request(request);
         const body = {
             status: 'Success',
-            message: 'Payments found',
+            message: 'Payment Detail Found',
             data
         }
         const httpReesponse = new HttpResponse(body, HttpStatus.OK)
