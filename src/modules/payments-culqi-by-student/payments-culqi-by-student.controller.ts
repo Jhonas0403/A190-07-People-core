@@ -9,7 +9,7 @@ export class PaymentsCulqiByStudentController {
     constructor( private paymentCulqiByStudent: PaymentsCulqiByStudentService ){}
 
     @Get('payments-culqi')
-    async paymentsCulqiByStudent(
+    async getPaymentsCulqiByStudent(
         @Query('studentId') studentId: string
     ): Promise<HttpResponse> {
         const request: PaymentsCulqiByStudentRequest = {

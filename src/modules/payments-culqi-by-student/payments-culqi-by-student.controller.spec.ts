@@ -35,7 +35,7 @@ describe('PaymentsCulqiByStudentController Unit Tests', () => {
     const data = [];
 
     const httpResponse = new HttpResponse({ status: 'Success', message: 'Payments found', data }, 200);
-    const result = await paymentsCulqiByStudentController.paymentsCulqiByStudent(studentId);
+    const result = await paymentsCulqiByStudentController.getPaymentsCulqiByStudent(studentId);
  
     expect(result).toEqual(httpResponse.body);
     expect(paymentsCulqiByStudentService.request).toHaveBeenCalledWith({ studentId });

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PaymentsDiscountFullInstallmentsRepository } from './payments-discount-full-installments.repository';
 import { PaymentDiscountFullInstallmentsRequest } from './interfaces/request';
-import { IncompleteRequestError } from 'src/shared/utils/errors/types';
+import { IncompleteRequestError } from '../../shared/utils/errors/types';
 import { PaymentDiscountFullInstallmentsResponse } from './interfaces/response';
 
 @Injectable()
