@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PaymentDetailRepository } from './payment-detail.repository';
 import { PaymentDetailReportRequest } from './interfaces/request';
-import { DataNotFoundException, IncompleteRequestError } from 'src/shared/utils/errors/types';
+import { DataNotFoundException, IncompleteRequestError } from '../../shared/utils/errors/types';
 
 @Injectable()
 export class PaymentDetailService {

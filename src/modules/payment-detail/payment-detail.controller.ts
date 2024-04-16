@@ -1,6 +1,6 @@
 import { Controller, Get, HttpStatus, Query } from '@nestjs/common';
 import { PaymentDetailService } from './payment-detail.service';
-import { HttpResponse } from 'src/infraestructure/entities/HttpResponse';
+import { HttpResponse } from '../../infraestructure/entities/HttpResponse';
 import { PaymentDetailReportRequest } from './interfaces/request';
 
 @Controller('payments')

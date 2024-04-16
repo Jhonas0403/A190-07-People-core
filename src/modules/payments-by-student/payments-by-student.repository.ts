@@ -19,8 +19,8 @@ export class PaymentsByStudentRepository {
         period: string
     ) {
         const query = buildQuery(studentId, period, 'UNUTP', 'PREG');
-        const fnToExecute = this.httpGateway.queryPeopleSoftDatabase(query);
-        const result = await fnToExecute();
+        const result = await this.httpGateway.queryPeopleSoftDatabase(query);
+        // const result = await fnToExecute();
         const data = result.body.data.result === null ? null : result.body.data.result.rows;
         if (data[0] != null) {
             const payments = this.paymentCons.processPayments(data);

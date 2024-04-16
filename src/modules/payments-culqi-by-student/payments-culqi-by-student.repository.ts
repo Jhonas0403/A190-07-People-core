@@ -17,17 +17,12 @@ export class PaymentsCulqiByStudentRepository {
 
     async find( studentId: string ){
         const query = buildQuery(studentId, 'UNUTP');
-        const fnToExecute = this.httpGateway.queryPeopleSoftDatabase(query);
-        const result = await fnToExecute();
-        const data = result.body.data.result === null ? null : result.body.data.result.rows;
+        const result = await this.httpGateway.queryPeopleSoftDatabase(query);
+        const data = result.body.data.result.rows;
         
-        if (data[0] != null) {
-            const payments = this.paymentCons.processPayments(data);
+        if (!data[0]) return [];
 
-            return payments;
-        }
-
-        return [];
+        return this.paymentCons.processPayments(data);
     }
 }
 

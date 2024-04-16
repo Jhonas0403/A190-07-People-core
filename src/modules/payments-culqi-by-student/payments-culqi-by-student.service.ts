@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PaymentsCulqiByStudentRepository } from './payments-culqi-by-student.repository';
 import { PaymentsCulqiByStudentRequest } from './interfaces/request';
-import { IncompleteRequestError, DataNotFoundException } from 'src/shared/utils/errors/types';
+import { IncompleteRequestError, DataNotFoundException } from '../../shared/utils/errors/types';
 import { PaymentsCulqiByStudentReportResponse } from './interfaces/response';
 
 @Injectable()

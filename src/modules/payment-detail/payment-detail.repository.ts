@@ -17,8 +17,8 @@ export class PaymentDetailRepository {
 
     async find(studentId: string, itemNbr: string) {
         const query = buildQuery(studentId, itemNbr);
-        const fnToExecute = this.httpGateway.queryPeopleSoftDatabase(query);
-        const result = await fnToExecute();
+        const result = await this.httpGateway.queryPeopleSoftDatabase(query);
+        // const result = await fnToExecute();
         const data = result.body.data.result === null ? null : result.body.data.result.rows;
         
         if (data[0] != null) {
