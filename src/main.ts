@@ -15,11 +15,11 @@ AWSXRay.captureHTTPsGlobal(require('http'));
 
 async function createApplication(): Promise<NestExpressApplication> {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  app.use(AWSXRay.express.openSegment('"core-academics-schedule'));
+  app.use(AWSXRay.express.openSegment('"core-payments'));
 
   const config = new DocumentBuilder()
-    .setTitle('A190-17-ms-core-academics-schedule')
-    .setDescription('API documentation A190-17-ms-core-academics-schedule')
+    .setTitle('A190-07-ms-payments-core')
+    .setDescription('API documentation A190-07-ms-core-payments')
     .setVersion('1.0.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);

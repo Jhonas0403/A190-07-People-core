@@ -1,8 +1,7 @@
 import { Controller, Get, HttpStatus, Query, Req } from "@nestjs/common";
-import { PaymentsByStudentService } from "./PaymentsByStudent.service";
 import { HttpResponse } from '../../infraestructure/entities/HttpResponse';
-import { HttpRequest } from "src/infraestructure/entities/HttpRequest";
-import { PaymentsByStudentRequest } from "./dto/request";
+import { PaymentsByStudentRequest } from "../payments-by-student/interfaces/request";
+import { PaymentsByStudentService } from "./payments-by-student.service";
 @Controller()
 
 export class PaymentsByStudentController {
