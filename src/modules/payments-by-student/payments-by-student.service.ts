@@ -2,8 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { PaymentsByStudentRequest } from "../payments-by-student/interfaces/request";
 import { PaymentsByStudentRepository } from "./payments-by-student.repository";
 import { PaymentsByStudentResponse } from "./interfaces/response";
-import { IncompleteRequestError, DataNotFoundException } from "src/shared/utils/errors/types";
-import { map } from "rxjs";
+import { IncompleteRequestError, DataNotFoundException } from "../../shared/utils/errors/types";
 
 @Injectable()
 export class PaymentsByStudentService{
@@ -56,7 +55,7 @@ const mapPayments = (data): PaymentsByStudentResponse => {
     }
   }
   
-  function verifyIfDataHaveBeenFound(data): void {
+  function verifyIfDataHaveBeenFound(data): void {  
     if (data.length === 0 || isAllPropertiesNull(data[0])) {
       throw new DataNotFoundException('Data not found');
     }
